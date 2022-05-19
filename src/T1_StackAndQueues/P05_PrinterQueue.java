@@ -18,7 +18,7 @@ public class P05_PrinterQueue {
                     System.out.println("Printer is on standby");
                 } else {
                     String firstInQueue = printerQueue.poll();
-                    System.out.println("canceled" + firstInQueue);
+                    System.out.println("Canceled " + firstInQueue);
                 }
             } else {
                 printerQueue.offer(fileName);
