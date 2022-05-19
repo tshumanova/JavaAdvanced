@@ -1,5 +1,6 @@
 package T1_StackAndQueues;
 
+import java.util.ArrayDeque;
 import java.util.Scanner;
 
 public class P05_PrinterQueue {
@@ -8,10 +9,26 @@ public class P05_PrinterQueue {
 
         String fileName = scanner.nextLine();
 
-        while (!fileName.equals("print")) {
-            if (fileName.equals("cancel"))
+        ArrayDeque<String> printerQueue = new ArrayDeque<>();
 
-                fileName = scanner.nextLine();
+        while (!fileName.equals("print")) {
+
+            if (fileName.equals("cancel")) {
+                if (printerQueue.isEmpty()) {
+                    System.out.println("Printer is on standby");
+                } else {
+                    String firstInQueue = printerQueue.poll();
+                    System.out.println("canceled" + firstInQueue);
+                }
+            } else {
+                printerQueue.offer(fileName);
+            }
+
+            fileName = scanner.nextLine();
+        }
+        for (String file : printerQueue) {
+            System.out.println(file);
+
         }
     }
 }
