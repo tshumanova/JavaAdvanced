@@ -8,17 +8,20 @@ public class P01_BrowserHistory {
         Scanner scanner = new Scanner(System.in);
 
         String nextNavigation = scanner.nextLine();
+
         ArrayDeque<String> history = new ArrayDeque<>();
+
         String currentURL = "blank";
         while (!nextNavigation.equals("Home")) {
 
             if (nextNavigation.equals("back")) {
                 if (!history.isEmpty()) {
                     currentURL = history.pop();
-                    nextNavigation = scanner.nextLine();
-                    continue;
+
                 } else {
                     System.out.println("no previous URLs");
+                    nextNavigation = scanner.nextLine();
+                    continue;
                 }
             } else {
                 if (!currentURL.equals("blank")) {
