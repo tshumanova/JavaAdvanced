@@ -1,23 +1,34 @@
 package T1_StackAndQueues;
 
+import java.util.ArrayDeque;
 import java.util.Scanner;
 
 public class P01_BrowserHistory {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String command = scanner.nextLine();
-
+        String nextNavigation = scanner.nextLine();
+        ArrayDeque<String> history = new ArrayDeque<>();
         String currentURL = "blank";
-        while (!command.equals("Home")) {
-            if (command.equals("back")) {
+        while (!nextNavigation.equals("Home")) {
 
+            if (nextNavigation.equals("back")) {
+                if (!history.isEmpty()) {
+                    currentURL = history.pop();
+                    nextNavigation = scanner.nextLine();
+                    continue;
+                } else {
+                    System.out.println("no previous URLs");
+                }
             } else {
-                currentURL = command;
+                if (!currentURL.equals("blank")) {
+                    history.push(currentURL);
+                }
+                currentURL = nextNavigation;
+
             }
-
-
-            command = scanner.nextLine();
+            System.out.println(currentURL);
+            nextNavigation = scanner.nextLine();
         }
     }
 }
