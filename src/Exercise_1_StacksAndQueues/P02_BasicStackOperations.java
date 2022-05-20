@@ -2,6 +2,7 @@ package Exercise_1_StacksAndQueues;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class P02_BasicStackOperations {
@@ -12,16 +13,25 @@ public class P02_BasicStackOperations {
                 .toArray();
 
         int countToPush = input[0];
-        int countToPop = input[1];;
-        int countToSearch = input[2];
+        int countToPop = input[1];
+        int elementToSearch = input[2];
 
         int[] numbers = Arrays.stream(scanner.nextLine().split(" "))
                 .mapToInt(Integer::parseInt)
                 .toArray();
-        ArrayDeque<Integer>stack=new ArrayDeque<>();
-        for(int i=0;i<countToPush;i++){
+        ArrayDeque<Integer> stack = new ArrayDeque<>();
+        for (int i = 0; i < countToPush; i++) {
             stack.push(numbers[i]);
-
+        }
+        for (int i = 0; i < countToPop; i++) {
+            stack.pop();
+        }
+        if (stack.contains(elementToSearch)) {
+            System.out.println("true");
+        } else if (stack.isEmpty()) {
+            System.out.println("0");
+        } else {
+            System.out.println(Collections.min(stack));
         }
     }
 }
