@@ -14,7 +14,7 @@ public class P01_ReverseNumbersWithAStack {
 
         }
         for (Integer integer : stack) {
-            System.out.printf("%s", stack.pop());
+            System.out.printf("%s ", stack.pop());
         }
     }
 }
