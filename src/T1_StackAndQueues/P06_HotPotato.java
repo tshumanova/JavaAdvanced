@@ -12,5 +12,13 @@ public class P06_HotPotato {
         ArrayDeque<String> kids = new ArrayDeque<>();
         Collections.addAll(kids, input);
         int number = Integer.parseInt(scanner.nextLine());
+
+        while (kids.size() > 1) {
+            for (int i = 1; i < number; i++) {
+                kids.offer(kids.pop());
+            }
+            System.out.println("Removed " + kids.poll());
+        }
+        System.out.println("Last is " + kids.peek());
     }
 }
