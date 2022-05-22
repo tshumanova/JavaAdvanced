@@ -17,7 +17,6 @@ public class T2_SimpleCalculator {
         System.out.println(calculator.peek());
 
     }
-
     private static void sum(String pop, String pop1, String pop2, ArrayDeque<String> calculation) {
         if ("+".equals(pop1)) calculation.push(String.valueOf(Integer.parseInt(pop) + Integer.parseInt(pop2)));
         else calculation.push(String.valueOf(Integer.parseInt(pop) - Integer.parseInt(pop2)));
