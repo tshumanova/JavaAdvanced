@@ -16,9 +16,16 @@ public class P07_MathPotato {
         while (kids.size() > 1) {
             for (int i = 1; i < number; i++) {
                 kids.offer(kids.poll());
-
             }
+            if (primeCircle == 1 || primeCircle == 4 || (primeCircle > 5 &&
+                    (primeCircle % 2 == 0 || primeCircle % 3 == 0 || primeCircle % 5 == 0))) {
+                System.out.println("Removed " + kids.poll());
+            } else {
+                System.out.println("Prime " + kids.peek());
+            }
+            primeCircle++;
         }
-
+        System.out.println("Last is " + kids.peek());
     }
 }
+
