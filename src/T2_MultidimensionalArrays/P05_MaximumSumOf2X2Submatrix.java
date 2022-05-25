@@ -21,7 +21,32 @@ public class P05_MaximumSumOf2X2Submatrix {
                     .mapToInt(Integer::parseInt)
                     .toArray();
         }
-        printMatrix(matrix);
+        //Обикалям всички ст-ти сравнявам с предходната
+        // обновявам ако намеря по-голяма текуща
+        int maxSum = Integer.MIN_VALUE;
+
+        int[][] result = new int[2][2];
+
+        for (int row = 0; row < rows - 1; row++) {
+            for (int col = 0; col < cols - 1; col++) {
+                int currSum = matrix[row][col]
+                        + matrix[row][col + 1]
+                        + matrix[row + 1][col]
+                        + matrix[row + 1][col + 1];
+
+                if (maxSum < currSum) {
+                    maxSum = currSum;
+                    result = new int[][]{
+                            {matrix[row][col], matrix[row][col + 1]},
+                            {matrix[row + 1][col], matrix[row + 1][col + 1]}
+                    };
+                }
+            }
+        }
+
+
+        printMatrix(result);
+        System.out.println(maxSum);
     }
 
     private static void printMatrix(int[][] matrix) {
