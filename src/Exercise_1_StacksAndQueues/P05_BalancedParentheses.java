@@ -26,9 +26,9 @@ public class P05_BalancedParentheses {
             }
         }
         if (isBalanced) {
-            System.out.println("YES");
-        } else {
             System.out.println("NO");
+        } else {
+            System.out.println("YES");
         }
     }
 }
