@@ -8,7 +8,7 @@ import java.util.Set;
 public class P01_ParkingLot {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-       Set<String> cars = new LinkedHashSet<>();
+        Set<String> cars = new LinkedHashSet<>();
         String input = scanner.nextLine();
 
         while (!input.equals("END")) {
@@ -26,7 +26,7 @@ public class P01_ParkingLot {
         if (cars.isEmpty()) {
             System.out.println("Parking Lot is Empty");
         } else {
-            System.out.println(String.join(System.out.print));
+            System.out.println(String.join(System.lineSeparator(), cars));
         }
     }
 }
