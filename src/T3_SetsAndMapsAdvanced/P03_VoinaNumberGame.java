@@ -1,9 +1,6 @@
 package T3_SetsAndMapsAdvanced;
 
-import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -25,11 +22,28 @@ public class P03_VoinaNumberGame {
             if (rounds == 50) {
                 break;
             }
-            int firstCard=firstDeck.iterator().next();
-            firstDeck.iterator().remove();
+            Iterator<Integer> firstIterator = firstDeck.iterator();
+            int firstCard = firstIterator.next();
+            firstIterator.remove();
 
-            int secondCard=firstDeck.iterator().next();
-            firstDeck.iterator().remove();
+            Iterator<Integer> secondIterator = secondDeck.iterator();
+            int secondCard = secondIterator.next();
+            secondIterator.remove();
+
+            if (firstCard > secondCard) {
+                firstDeck.add(firstCard);
+                firstDeck.add(secondCard);
+            } else if (secondCard > firstCard) {
+                secondDeck.add(firstCard);
+                secondDeck.add(secondCard);
+            }
+        }
+        if (firstDeck.size() > secondDeck.size()) {
+            System.out.println("First player win!");
+        } else if (secondDeck.size() > firstDeck.size()) {
+            System.out.println("Second player win!");
+        } else {
+            System.out.println("Draw!");
         }
     }
 }
