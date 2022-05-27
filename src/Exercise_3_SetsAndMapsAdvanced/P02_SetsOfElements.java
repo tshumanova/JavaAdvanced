@@ -25,7 +25,7 @@ public class P02_SetsOfElements {
         }
         for (String element : firstSet) {
             if (secondSet.contains(element)) {
-                System.out.println(element);
+                System.out.print(element+" ");
             }
         }
         System.out.println();
