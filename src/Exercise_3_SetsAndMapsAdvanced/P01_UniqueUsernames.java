@@ -17,5 +17,6 @@ public class P01_UniqueUsernames {
             System.out.println(username);
         }
         //  usernames.forEach(System.out::println);
+        //username.forEach(username -> System.out.print(username);
     }
 }
