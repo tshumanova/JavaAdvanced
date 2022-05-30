@@ -22,13 +22,13 @@ public class P02_WriteToFile {
             Set<Character> punctuationCodes = Set.of(',', '!', '?', '.');
 
             while (read != -1) {
-                if (punctuationCodes.contains((char)read)){
+                if (!punctuationCodes.contains((char) read)) {
                     outputStream.write(read);
-                                   }
+
+                }
                 read = inputStream.read();
             }
-        }
-        catch (IOException ignored) {
+        } catch (IOException ignored) {
         }
     }
 }
