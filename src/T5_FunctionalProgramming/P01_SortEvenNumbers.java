@@ -18,6 +18,6 @@ public class P01_SortEvenNumbers {
 
         Collections.sort(numbers);
 
-
+        System.out.println(String.join(", ", numbers.toString().replaceAll("[\\[\\]]", "")));
     }
 }
