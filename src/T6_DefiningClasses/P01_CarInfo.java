@@ -14,6 +14,13 @@ public class P01_CarInfo {
             String[] token = scanner.nextLine().split("\\s+");
             String brand = token[0];
             String model = token[1];
+            int horsePower = Integer.parseInt(token[2]);
+            Car car = new Car();
+            car.setBrand(brand);
+            car.setModel(model);
+            car.setHorsePower(horsePower);
+            cars.add(car);
         }
+        cars.forEach(car -> System.out.println(car.carInfo()));
     }
 }
