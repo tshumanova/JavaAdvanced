@@ -10,7 +10,7 @@ public class Tire {
     private int tireThreeAge;
     private int tireFourAge;
 
-    public Tire(double tireOnePressure, int tireOneAge, double tireTwoPressure, int tireTwoAge, double tireThreePressure, int tireThreeAge, double tireFourPressure,   int tireFourAge) {
+    public Tire(double tireOnePressure, int tireOneAge, double tireTwoPressure, int tireTwoAge, double tireThreePressure, int tireThreeAge, double tireFourPressure, int tireFourAge) {
         this.tireOnePressure = tireOnePressure;
         this.tireTwoPressure = tireTwoPressure;
         this.tireThreePressure = tireThreePressure;
@@ -83,4 +83,5 @@ public class Tire {
 
     public void setTireFourAge(int tireFourAge) {
         this.tireFourAge = tireFourAge;
+    }
 }
