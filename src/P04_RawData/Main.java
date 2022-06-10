@@ -15,6 +15,7 @@ public class Main {
         carsInCatalog.put("flamable", new ArrayList<>());
         while (line-- > 0) {
             String[] token = scanner.nextLine().split("\\s+");
+            String model = token[0];
             int engineSpeed = Integer.parseInt(token[1]);
             int enginePower = Integer.parseInt(token[2]);
             int cargoWeight = Integer.parseInt(token[3]);
@@ -30,7 +31,7 @@ public class Main {
 
             Car singleCar = new Car(model, engineSpeed, enginePower, cargoWeight, cargoType, tireOnePressure, tireOneAge,
                     tireTwoPressure, tireTwoAge, tireThreePressure, tireThreeAge, tireFourPressure, tireFourAge);
-            carsInCatalog.get(cargoType.add(singleCar);
+            carsInCatalog.get(cargoType).add(singleCar);
         }
         String command = scanner.nextLine();
         Predicate<Car> filter = getPredicate(command);
@@ -40,7 +41,7 @@ public class Main {
     private static Predicate<Car> getPredicate(String command) {
         switch (command) {
             case "flamable":
-                return s -> s.getEngine().getEnginePower() > 250;
+                return s -> s.getgetEnginePower() > 250;
             case "fragile":
                 return s -> s.getTire().getTireOnePressure() < 1 || s.getTire().getTwoPressure() < 1 ||
                         s.getThreePressure() < 1 || s.getTire().getTireFourPressure() < 1;
