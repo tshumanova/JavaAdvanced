@@ -6,12 +6,12 @@ public class Car {
     private int horsePower = -1;
 
 
-    public Car(String brand) {
+    public Car(String model, int engineSpeed, int enginePower, int cargoWeight, String brand, double tireOnePressure, int tireOneAge, double tireTwoPressure, int tireTwoAge, double tireThreePressure, int tireThreeAge, double tireFourPressure, int tireFourAge) {
         this.brand = brand;
     }
 
     public Car(String brand, String model, int horsePower) {
-        this(brand);
+        this(model, engineSpeed, enginePower, cargoWeight, brand, tireOnePressure, tireOneAge, tireTwoPressure, tireTwoAge, tireThreePressure, tireThreeAge, tireFourPressure, tireFourAge);
         this.model = model;
         this.horsePower = horsePower;
     }
