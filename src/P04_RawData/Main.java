@@ -41,7 +41,7 @@ public class Main {
     private static Predicate<Car> getPredicate(String command) {
         switch (command) {
             case "flamable":
-                return s -> s.getgetEnginePower() > 250;
+                return s -> s.getEnginePower() > 250;
             case "fragile":
                 return s -> s.getTire().getTireOnePressure() < 1 || s.getTire().getTwoPressure() < 1 ||
                         s.getThreePressure() < 1 || s.getTire().getTireFourPressure() < 1;
