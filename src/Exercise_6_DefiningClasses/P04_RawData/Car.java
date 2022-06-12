@@ -1,4 +1,4 @@
-package P04_RawData;
+package Exercise_6_DefiningClasses.P04_RawData;
 
 public class Car {
     private String model;
