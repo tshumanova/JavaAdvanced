@@ -1,4 +1,4 @@
-package P04_RawData;
+package Exercise_6_DefiningClasses.P04_RawData;
 
 import T6_DefiningClasses.P02_Constructors.Car;
 
@@ -28,24 +28,17 @@ public class Main {
             int tireThreeAge = Integer.parseInt(token[10]);
             double tireFourPressure = Double.parseDouble(token[11]);
             int tireFourAge = Integer.parseInt(token[12]);
+            //  Car singleCar = new Car(model,
+            //            engineSpeed, enginePower,
+            //         cargoWeight, cargoType,
+            //            tireOnePressure, tireOneAge, tireTwoPressure, tireTwoAge, tireThreePressure, tireThreeAge, tireFourPressure, tireFourAge);
+            //    carsInCatalog.get(cargoType).add(singleCar);
+            // }
+            //         String command = scanner.nextLine();
+            //       Predicate<Car> filter = getPredicate(command);
+            //      carsInCatalog.get(command).stream().filter(Objects.requireNonNull(filter)).forEach(System.out::println);
 
-            Car singleCar = new Car(model, engineSpeed, enginePower, cargoWeight, cargoType, tireOnePressure, tireOneAge,
-                    tireTwoPressure, tireTwoAge, tireThreePressure, tireThreeAge, tireFourPressure, tireFourAge);
-            carsInCatalog.get(cargoType).add(singleCar);
         }
-        String command = scanner.nextLine();
-        Predicate<Car> filter = getPredicate(command);
-        carsInCatalog.get(command).stream().filter(Objects.requireNonNull(filter)).forEach(System.out::println);
-    }
 
-    private static Predicate<Car> getPredicate(String command) {
-        switch (command) {
-            case "flamable":
-                return s -> s.getEnginePower() > 250;
-            case "fragile":
-                return s -> s.getTire().getTireOnePressure() < 1 || s.getTire().getTwoPressure() < 1 ||
-                        s.getThreePressure() < 1 || s.getTire().getTireFourPressure() < 1;
-        }
-        return null;
     }
 }
