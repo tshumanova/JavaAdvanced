@@ -1,10 +1,10 @@
 package Exercise_6_DefiningClasses.P04_RawData;
 
 public class Car {
-    private String model;
-    private Engine engine;
-    private Cargo cargo;
-    private Tire tire;
+    String model;
+    Engine engine;
+    Cargo cargo;
+    Tire tire;
 
     public Car(String model, int engineSpeed, int enginePower, int cargoWeight, String cargoType, double tireOnePressure, int tireOneAge, double tireTwoPressure, int tireTwoAge, double tireThreePressure, int tireThreeAge, double tireFourPressure, int tireFourAge) {
         this.model = model;
