@@ -28,17 +28,11 @@ public class Main {
             int tireThreeAge = Integer.parseInt(token[10]);
             double tireFourPressure = Double.parseDouble(token[11]);
             int tireFourAge = Integer.parseInt(token[12]);
-             Car singleCar = new Car(model,
-                   engineSpeed, enginePower,
-                cargoWeight, cargoType,
-                      tireOnePressure, tireOneAge, tireTwoPressure, tireTwoAge, tireThreePressure, tireThreeAge, tireFourPressure, tireFourAge);
-              carsInCatalog.get(cargoType).add(singleCar);
+            Car singleCar = new Car(model,
+                    engineSpeed, enginePower,
+                    cargoWeight, cargoType,
+                    tireOnePressure, tireOneAge, tireTwoPressure, tireTwoAge, tireThreePressure, tireThreeAge, tireFourPressure, tireFourAge);
+            carsInCatalog.get(cargoType).add(singleCar);
         }
-            //         String command = scanner.nextLine();
-            //       Predicate<Car> filter = getPredicate(command);
-            //      carsInCatalog.get(command).stream().filter(Objects.requireNonNull(filter)).forEach(System.out::println);
-
-        }
-
     }
 }
