@@ -12,7 +12,7 @@ public class Main {
         int lineNumber = Integer.parseInt(scanner.nextLine());
         while (lineNumber-- > 0) {
             String[] token = scanner.nextLine().split("\\s+");
-            Car car = token.length == 1 ? new Car(token[0]) : new Car(token[0], token[1], Integer.parseInt(token[2]));
+            Car car = token.length == 1 ? new Car(model, engineSpeed, enginePower, cargoWeight, token[0], tireOnePressure, tireOneAge, tireTwoPressure, tireTwoAge, tireThreePressure, tireThreeAge, tireFourPressure, tireFourAge) : new Car(token[0], token[1], Integer.parseInt(token[2]));
             cars.add(car);
         }
         cars.forEach((car -> System.out.println(car.carInfo())));
