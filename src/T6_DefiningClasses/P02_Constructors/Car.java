@@ -5,11 +5,12 @@ public class Car {
     private String model = "unknown";
     private int horsePower = -1;
 
-    public Car(String model, int engineSpeed, int enginePower, int cargoWeight, String brand, double tireOnePressure, int tireOneAge, double tireTwoPressure, int tireTwoAge, double tireThreePressure, int tireThreeAge, double tireFourPressure, int tireFourAge){
-        this.brand=brand;
+    public Car(String brand) {
+        this.brand = brand;
     }
-    public Car(String brand,String model,int horsePower) {
-        this(model, engineSpeed, enginePower, cargoWeight, brand, tireOnePressure, tireOneAge, tireTwoPressure, tireTwoAge, tireThreePressure, tireThreeAge, tireFourPressure, tireFourAge);
+
+    public Car(String brand, String model, int horsePower) {
+        this(brand);
         this.model = model;
         this.horsePower = horsePower;
     }
@@ -19,12 +20,10 @@ public class Car {
     }
 
     public String getModel() {
-
         return model;
     }
 
     public int getHorsePower() {
-
         return horsePower;
     }
 
