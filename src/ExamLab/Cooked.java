@@ -18,6 +18,26 @@ public class Cooked {
                 .map(Integer::parseInt)
                 .forEach(ingredients::push);
 
+        while (!liquids.isEmpty() && !ingredients.isEmpty()) {
+            int lastIngredients = ingredients.pop();
+            int sum = liquids.poll() + lastIngredients;
 
+            String cookedFood;
+            switch (sum) {
+                case 25:
+                    cookedFood = "Bread";
+                    break;
+                case 50:
+                    cookedFood = "Cake";
+                    break;
+                case 75:
+                    cookedFood = "Pastry";
+                    break;
+                case 100:
+                    cookedFood = "Fruit Pie";
+                    break;
+
+            }
+        }
     }
 }
