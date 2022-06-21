@@ -13,6 +13,11 @@ public class Cooked {
                 .map(Integer::parseInt)
                 .collect(Collectors.toCollection(ArrayDeque::new));
 
+        ArrayDeque<Integer> ingredients = new ArrayDeque<>();
+        Arrays.stream(scanner.nextLine().split("\\s+"))
+                .map(Integer::parseInt)
+                .forEach(ingredients::push);
+
 
     }
 }
