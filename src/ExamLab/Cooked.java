@@ -1,8 +1,6 @@
 package ExamLab;
 
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Cooked {
@@ -17,6 +15,8 @@ public class Cooked {
         Arrays.stream(scanner.nextLine().split("\\s+"))
                 .map(Integer::parseInt)
                 .forEach(ingredients::push);
+
+        Map<String, Integer> cookedFoods = new TreeMap<>();
 
         while (!liquids.isEmpty() && !ingredients.isEmpty()) {
             int lastIngredients = ingredients.pop();
@@ -36,7 +36,12 @@ public class Cooked {
                 case 100:
                     cookedFood = "Fruit Pie";
                     break;
+            }
 
+            if (cookedFood != null) {
+                cookedFoods.putIfAbsent(cookedFood, 0);
+                int newVal = cookedFoods.get(cookedFood) + 1;
+                cookedFoods.putIfAbsent(cookedFood, newVal);
             }
         }
     }
