@@ -18,10 +18,10 @@ public class Cooked {
 
         Map<String, Integer> cookedFoods = new TreeMap<>();
 
-        cookedFoods.put("Bread",0);
-        cookedFoods.put("Cake",0);
-        cookedFoods.put("Pastry",0);
-        cookedFoods.put("Fruit Pie",0);
+        cookedFoods.put("Bread", 0);
+        cookedFoods.put("Cake", 0);
+        cookedFoods.put("Pastry", 0);
+        cookedFoods.put("Fruit Pie", 0);
 
 
         while (!liquids.isEmpty() && !ingredients.isEmpty()) {
@@ -45,10 +45,20 @@ public class Cooked {
             }
 
             if (cookedFood != null) {
-                cookedFoods.putIfAbsent(cookedFood, 0);
                 int newVal = cookedFoods.get(cookedFood) + 1;
                 cookedFoods.putIfAbsent(cookedFood, newVal);
+            } else {
+                ingredients.push(lastIngredients + 3);
             }
         }
+        boolean allFoodsAreCooked = cookedFoods.entrySet().stream().allMatch(e -> e.getValue() > 0);
+
+        if (allFoodsAreCooked) {
+            System.out.println("Wohoo! You succeeded in cooking all the food!");
+        } else {
+            System.out.println("Ugh, what a pity! You didn't have enough materials to cook everything.");
+        }
+
+
     }
 }
