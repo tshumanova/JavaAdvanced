@@ -18,6 +18,12 @@ public class Cooked {
 
         Map<String, Integer> cookedFoods = new TreeMap<>();
 
+        cookedFoods.put("Bread",0);
+        cookedFoods.put("Cake",0);
+        cookedFoods.put("Pastry",0);
+        cookedFoods.put("Fruit Pie",0);
+
+
         while (!liquids.isEmpty() && !ingredients.isEmpty()) {
             int lastIngredients = ingredients.pop();
             int sum = liquids.poll() + lastIngredients;
