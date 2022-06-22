@@ -58,7 +58,13 @@ public class Cooked {
         } else {
             System.out.println("Ugh, what a pity! You didn't have enough materials to cook everything.");
         }
+        String remainingLiquids = liquids.isEmpty() ? "none" : liquids.stream()
+                .map(String::valueOf)
+                .collect(Collectors.joining(", "));
 
+        System.out.println("Liquids left: " + remainingLiquids);
+        cookedFoods.entrySet()
+                .forEach(e -> System.out.println(e.getKey() + ": " + e.getValue()));
 
     }
 }
