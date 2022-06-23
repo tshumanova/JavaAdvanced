@@ -1,5 +1,6 @@
 package ExamLab;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -21,6 +22,16 @@ public class FlowerWreaths {
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
 
+        ArrayDeque<Integer> liliesStack = new ArrayDeque<>();
+        for (Integer lily : lilies) {
+            liliesStack.push(lily);
+        }
+        ArrayDeque<Integer> rosesQueue = new ArrayDeque<>(roses);
+        for (Integer rose : roses) {
+            rosesQueue.offer(rose);
+        }
 
+        System.out.println(liliesStack.pop());
+        System.out.println(rosesQueue.poll());
     }
 }
