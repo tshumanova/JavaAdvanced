@@ -30,8 +30,25 @@ public class FlowerWreaths {
         for (Integer rose : roses) {
             rosesQueue.offer(rose);
         }
+        int wreath = 0;
+        int otherFlowers = 0;
+        while (!liliesStack.isEmpty() && rosesQueue.isEmpty()) {
+            int lily = liliesStack.pop();
+            int rose = rosesQueue.poll();
 
-        System.out.println(liliesStack.pop());
-        System.out.println(rosesQueue.poll());
+            int sum = lily + rose;
+
+            while (sum > 15) {
+                lily -= 2;
+                sum = lily + rose;
+            }
+
+            if (sum == 15) {
+                wreath++;
+            } else if (sum < 15) {
+                otherFlowers += sum;
+            }
+        }
     }
 }
+
