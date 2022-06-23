@@ -12,6 +12,7 @@ public class Cooked {
                 .collect(Collectors.toCollection(ArrayDeque::new));
 
         ArrayDeque<Integer> ingredients = new ArrayDeque<>();
+
         Arrays.stream(scanner.nextLine().split("\\s+"))
                 .map(Integer::parseInt)
                 .forEach(ingredients::push);
@@ -28,6 +29,7 @@ public class Cooked {
             int lastIngredients = ingredients.pop();
             int sum = liquids.poll() + lastIngredients;
 
+
             String cookedFood;
             switch (sum) {
                 case 25:
@@ -42,11 +44,14 @@ public class Cooked {
                 case 100:
                     cookedFood = "Fruit Pie";
                     break;
+                default:
+                    cookedFood = null;
+                    break;
             }
 
             if (cookedFood != null) {
                 int newVal = cookedFoods.get(cookedFood) + 1;
-                cookedFoods.putIfAbsent(cookedFood, newVal);
+                cookedFoods.put(cookedFood, newVal);
             } else {
                 ingredients.push(lastIngredients + 3);
             }
@@ -58,11 +63,20 @@ public class Cooked {
         } else {
             System.out.println("Ugh, what a pity! You didn't have enough materials to cook everything.");
         }
+
         String remainingLiquids = liquids.isEmpty() ? "none" : liquids.stream()
                 .map(String::valueOf)
                 .collect(Collectors.joining(", "));
 
         System.out.println("Liquids left: " + remainingLiquids);
+
+
+        String remainingIngredients = ingredients.isEmpty() ? "none" : ingredients.stream()
+                .map(String::valueOf)
+                .collect(Collectors.joining(", "));
+
+        System.out.println("Ingredients left: " + remainingIngredients);
+
         cookedFoods.entrySet()
                 .forEach(e -> System.out.println(e.getKey() + ": " + e.getValue()));
 
