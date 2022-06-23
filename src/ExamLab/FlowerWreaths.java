@@ -57,7 +57,7 @@ public class FlowerWreaths {
         if (wreaths >= 5) {
             System.out.printf("You made it, you are going to the competition with %d wreaths!", wreaths);
         } else {
-            System.out.printf("You didn't make it, you need %d wreaths more", 5 - wreaths);
+            System.out.printf("You didn't make it, you need %d wreaths more!", 5 - wreaths);
         }
     }
 }
