@@ -26,13 +26,14 @@ public class FlowerWreaths {
         for (Integer lily : lilies) {
             liliesStack.push(lily);
         }
-        ArrayDeque<Integer> rosesQueue = new ArrayDeque<>(roses);
+        ArrayDeque<Integer> rosesQueue = new ArrayDeque<>();
         for (Integer rose : roses) {
             rosesQueue.offer(rose);
         }
-        int wreath = 0;
+        int wreaths = 0;
         int otherFlowers = 0;
-        while (!liliesStack.isEmpty() && rosesQueue.isEmpty()) {
+
+        while (!liliesStack.isEmpty() && !rosesQueue.isEmpty()) {
             int lily = liliesStack.pop();
             int rose = rosesQueue.poll();
 
@@ -44,10 +45,19 @@ public class FlowerWreaths {
             }
 
             if (sum == 15) {
-                wreath++;
+                wreaths++;
             } else if (sum < 15) {
                 otherFlowers += sum;
             }
+        }
+
+        int leftoverWreaths = otherFlowers / 15;
+        wreaths += leftoverWreaths;
+
+        if (wreaths >= 5) {
+            System.out.printf("You made it, you are going to the competition with %d wreaths!", wreaths);
+        } else {
+            System.out.printf("You didn't make it, you need %d wreaths more", 5 - wreaths);
         }
     }
 }
