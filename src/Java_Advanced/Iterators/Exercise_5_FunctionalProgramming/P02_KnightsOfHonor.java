@@ -1,4 +1,4 @@
-package Exercise_5_FunctionalProgramming;
+package Java_Advanced.Iterators.Exercise_5_FunctionalProgramming;
 
 import java.util.Arrays;
 import java.util.Scanner;
