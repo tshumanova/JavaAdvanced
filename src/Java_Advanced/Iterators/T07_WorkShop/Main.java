@@ -1,4 +1,4 @@
-package T07_WorkShop;
+package Java_Advanced.Iterators.T07_WorkShop;
 
 import java.util.ArrayList;
 
