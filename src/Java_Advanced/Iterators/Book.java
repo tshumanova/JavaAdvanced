@@ -1,17 +1,19 @@
-package P04_BookComparator;
+package Java_Advanced.Iterators;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Book implements Comparable<Book> {
+public class Book {
+
     private String title;
     private int year;
     private List<String> authors;
 
     public Book(String title, int year, String... authors) {
-        setTitle(title);
-        setYear(year);
-        setAuthors(authors);
+        this.setTitle(title);
+        this.setYear(year);
+        this.setAuthors(authors);
     }
 
     public String getTitle() {
@@ -35,15 +37,10 @@ public class Book implements Comparable<Book> {
     }
 
     private void setAuthors(String... authors) {
-        this.authors = Arrays.asList(authors);
-    }
-
-    @Override
-    public int compareTo(Book other) {
-        int result = this.title.compareTo(other.title);
-        if(result==0) {
-            result = Integer.compare(this.year, other.year);
+        if (authors.length == 0) {
+            this.authors = new ArrayList<>();
+        } else {
+            this.authors = Arrays.asList(authors);
         }
-        return result;
     }
 }

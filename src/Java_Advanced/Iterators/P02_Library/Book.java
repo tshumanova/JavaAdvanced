@@ -1,4 +1,4 @@
-package P02_Library;
+package Java_Advanced.Iterators.P02_Library;
 
 import java.util.Arrays;
 import java.util.List;

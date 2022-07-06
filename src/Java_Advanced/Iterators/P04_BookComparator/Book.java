@@ -1,4 +1,4 @@
-package P03_ComparableBook;
+package Java_Advanced.Iterators.P04_BookComparator;
 
 import java.util.Arrays;
 import java.util.List;
