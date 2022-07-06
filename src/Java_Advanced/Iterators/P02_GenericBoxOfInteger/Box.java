@@ -1,4 +1,4 @@
-package P01;
+package Java_Advanced.Iterators.P02_GenericBoxOfInteger;
 
 public class Box<E> {
     private E element;
@@ -12,4 +12,3 @@ public class Box<E> {
         return element.getClass().getName() + ": " + element;
     }
 }
-

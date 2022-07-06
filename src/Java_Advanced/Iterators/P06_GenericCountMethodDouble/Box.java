@@ -1,4 +1,4 @@
-package P05_GenericCountMethodString;
+package Java_Advanced.Iterators.P06_GenericCountMethodDouble;
 
 import java.util.ArrayList;
 import java.util.List;

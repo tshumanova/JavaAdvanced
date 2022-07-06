@@ -1,4 +1,4 @@
-package P07_CustomList;
+package Java_Advanced.Iterators.P07_CustomList;
 
 import java.util.ArrayList;
 import java.util.List;

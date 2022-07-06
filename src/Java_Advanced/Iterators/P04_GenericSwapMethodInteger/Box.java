@@ -1,4 +1,4 @@
-package P04_GenericSwapMethodInteger;
+package Java_Advanced.Iterators.P04_GenericSwapMethodInteger;
 
 import java.util.List;
 
