@@ -1,4 +1,4 @@
-package T6_DefiningClasses;
+package Java_Advanced.Iterators.T6_DefiningClasses;
 
 public class Car {
     private String brand;

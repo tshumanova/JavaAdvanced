@@ -1,4 +1,4 @@
-package T6_DefiningClasses.P02_Constructors;
+package Java_Advanced.Iterators.T6_DefiningClasses.P02_Constructors;
 
 public class Car {
     private final String brand;
