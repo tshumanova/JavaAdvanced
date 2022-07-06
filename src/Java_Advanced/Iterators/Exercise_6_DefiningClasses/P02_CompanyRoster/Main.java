@@ -1,4 +1,4 @@
-package Exercise_6_DefiningClasses.P02_CompanyRoster;
+package Java_Advanced.Iterators.Exercise_6_DefiningClasses.P02_CompanyRoster;
 
 import java.util.*;
 

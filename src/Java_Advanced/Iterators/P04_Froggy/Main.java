@@ -1,4 +1,4 @@
-package P04_Froggy;
+package Java_Advanced.Iterators.P04_Froggy;
 
 import java.util.Arrays;
 import java.util.Scanner;

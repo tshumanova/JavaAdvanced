@@ -1,4 +1,4 @@
-package P05_ComparingObjects;
+package Java_Advanced.Iterators.P05_ComparingObjects;
 
 import java.util.ArrayList;
 import java.util.List;

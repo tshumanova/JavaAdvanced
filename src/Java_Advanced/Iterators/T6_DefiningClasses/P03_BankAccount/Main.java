@@ -1,4 +1,4 @@
-package T6_DefiningClasses.P03_BankAccount;
+package Java_Advanced.Iterators.T6_DefiningClasses.P03_BankAccount;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package Exercise_6_DefiningClasses.P06_PokemonTrainer;
+package Java_Advanced.Iterators.Exercise_6_DefiningClasses.P06_PokemonTrainer;
 
 import java.util.Comparator;
 import java.util.LinkedHashMap;

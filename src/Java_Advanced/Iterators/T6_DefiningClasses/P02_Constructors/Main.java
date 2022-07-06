@@ -1,4 +1,4 @@
-package T6_DefiningClasses.P02_Constructors;
+package Java_Advanced.Iterators.T6_DefiningClasses.P02_Constructors;
 
 import java.util.LinkedHashSet;
 import java.util.Scanner;
