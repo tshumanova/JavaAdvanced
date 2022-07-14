@@ -1,4 +1,4 @@
-package Java_OOP.T2_Encapsulation;
+package Java_OOP.T2_Encapsulation.P01_SortByNameAndAge;
 
 public class Person {
     private String firstName;
