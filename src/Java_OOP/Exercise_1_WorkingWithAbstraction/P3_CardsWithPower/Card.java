@@ -1,7 +1,6 @@
 package Exercise_1_WorkingWithAbstraction.P3_CardsWithPower;
 
 
-
 public class Card {
     private Exercise_1_WorkingWithAbstraction.P3_CardsWithPower.CardSuits cardSuits;
     private Exercise_1_WorkingWithAbstraction.P3_CardsWithPower.CardRanks cardRanks;
